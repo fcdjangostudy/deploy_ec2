@@ -1,10 +1,10 @@
 from .base import *
 
-config_secret_debug = json.loads(open(CONFIG_SECRET_DEBUG_FILE).read())
+config_secret_deploy = json.loads(open(CONFIG_SECRET_DEPLOY_FILE).read())
 
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = config_secret_debug['django']['allowed_hosts']
+ALLOWED_HOSTS = config_secret_deploy['django']['allowed_hosts']
 
 print('@@@@@@ DEBUG:', DEBUG)
 print('@@@@@@ ALLOWED HOST', ALLOWED_HOSTS)
